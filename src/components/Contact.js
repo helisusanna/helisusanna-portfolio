@@ -2,27 +2,29 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { useForm, ValidationError } from '@formspree/react';
 import './styles.css';
-
-import { Grid, 
-        TextField,
-        Button,
-        Snackbar,
-        Badge,
-        CircularProgress,
-        Backdrop,
-        Divider,
-        Box,
-        Typography,
-     }  from '@material-ui/core';
-
+// Material-ui
+import { Grid, TextField, Button, Snackbar, Badge, CircularProgress, Backdrop, Divider, Typography,}  from '@material-ui/core';
+// Icons
 import CloseIcon from '@material-ui/icons/Close';
 import MailIcon from '@material-ui/icons/Mail';
 import OpenInBrowser from '@material-ui/icons/OpenInNewOutlined';
 import SendIcon from '@material-ui/icons/Send';
-
-import gallerylink from './images/gallery_link.jpg'
+// Images
+import backgroundImage from './images/bg.png'
+import backgroundImageTrans from './images/bg-trans.png'
 
 const useStyles = makeStyles((theme) => ({
+    grid: {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100vw',
+        [theme.breakpoints.down('md')]: {
+            backgroundImage: `url(${backgroundImageTrans})`,
+            backgroundAttachment: 'fixed',
+            backgroundPosition: 'top center',
+        },
+    },
     conGrid: {
         [theme.breakpoints.up('sm')]: {
             padding: theme.spacing(4),
@@ -43,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         opacity: 0.5,
+        marginLeft:theme.spacing(1),
     },
     txtform: {
         '& > *': {
@@ -61,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
     p: {
         marginLeft: theme.spacing(3),
         [theme.breakpoints.down('465')]: {
-            maxWidth: 250,
+            maxWidth: 300,
             margin: theme.spacing(1),
         },
     },
@@ -94,20 +97,24 @@ function Contact() {
     }
 
     return (
+        <div className={classes.grid}>
             <Grid container
             className={[classes.conGrid, 'slideanim']}
             direction="row"
-            justify="center"
+            justifyContent="center"
             alignItems="center">
-
-                <Grid item xs={12} sm={8} md={8} lg={12} className={classes.itemGrid}>
+                <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Typography variant="h4" className={classes.header}>Laita viestiä!</Typography>
                 </Grid>
                 <Grid item xs={12} sm={12} md={12} lg={12}>
                     <Divider/>
                 </Grid>
-
-
+            </Grid>
+            <Grid container
+            className={[classes.conGrid, 'slideanim']}
+            direction="column"
+            justifyContent="flex-start"
+            alignItems="flex-start">
                 <Grid item xs={12} sm={8} md={6} lg={6}  className={classes.itemGrid}>
                     {(state.submitting)
                     ? <>
@@ -118,9 +125,8 @@ function Contact() {
                     :
                     <>
                     <p className={classes.p}>
-                       <p id="tekofont" className={classes.p2}>Etsin toimeksiantajaa lopputyölleni.</p> 
-                        Opinnäytetyön aihe ei ole vielä varma, mutta ajatuksena olisi tehdä lopputyö käyttöliittymäkehitykseen tai dataan liittyen.
-                        Toiveena on tietysti myös työllistyä!
+                       <p id="tekofont" className={classes.p2}>Tästä voit laittaa mulle helposti viestiä</p> 
+                        Liittyen mihin vain. Mieluusti osallistun koodiprojekteihin, joissa pääsen kehittymään. Lisäksi teen valokuvauksia ja sisältöä mediaan.
                     </p>
                     <form onSubmit={handleSubmit} className={classes.txtform} autoComplete="off">
                         <TextField fullWidth label="Sähköpostiosoitteesi" htmlFor="email" id="email" type="email" name="email"/>
@@ -135,7 +141,7 @@ function Contact() {
                             field="message"
                             errors={state.errors}
                         />
-                        <Button type="submit" variant="contained" color="secondary" endIcon={<SendIcon/>}>
+                        <Button type="submit" variant="contained" color="primary" endIcon={<SendIcon/>}>
                             Lähetä
                         </Button>
                     </form>
@@ -143,29 +149,8 @@ function Contact() {
                     }
                 </Grid>
 
-                    <Grid item xs={12} sm={8} md={6} lg={6} className={classes.itemGrid}>
-                        <Grid item >
-                            <div id="image">
-                                <a href={`https://bhehy002.myportfolio.com/`} target="_blank">
-                                    <img className={classes.img} src={gallerylink} alt="helisusanna dev"/>
-                                </a>
-                                <div id="imageoverlay">
-                                    <Button 
-                                    variant="contained"
-                                    color="primary"
-                                    id="btn"
-                                    startIcon={<OpenInBrowser/>}
-                                    component="a" 
-                                    href={`https://bhehy002.myportfolio.com/`} 
-                                    target="_blank"
-                                    >
-                                        Valokuvagalleriaan
-                                    </Button>
-                                </div>
-                            </div>
-                        </Grid>
-                    </Grid>
             </Grid>
+        </div>
     );
 }
 export default Contact;

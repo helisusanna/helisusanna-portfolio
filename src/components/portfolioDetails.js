@@ -20,9 +20,10 @@ import sketchuptalo4 from './images/portfolio/sketchuptalo/sketchuptalo-4.jpg'
 import sketchuptalo5 from './images/portfolio/sketchuptalo/sketchuptalo-5.jpg'
 import sketchuptalo6 from './images/portfolio/sketchuptalo/peikkojahti-1.jpg'
 import sketchuptalo7 from './images/portfolio/sketchuptalo/peikkojahti-2.jpg'
-import rss1 from './images/portfolio/rss/rss-1.jpg'
-import rss2 from './images/portfolio/rss/rss-2.jpg'
-import rss3 from './images/portfolio/rss/rss-3.jpg'
+import rss1 from './images/portfolio/rss/rss-1.png'
+import rss2 from './images/portfolio/rss/rss-2.png'
+import rss3 from './images/portfolio/rss/rss-3.png'
+import rss4 from './images/portfolio/rss/rss-4.png'
 import blogi1 from './images/portfolio/blogi/blogi-1.jpg'
 import blogi2 from './images/portfolio/blogi/blogi-2.jpg'
 import blogi3 from './images/portfolio/blogi/blogi-3.jpg'
@@ -40,15 +41,101 @@ import valuutta1 from './images/portfolio/valuuttamuunnin/valuutta-1.jpg'
 import valuutta2 from './images/portfolio/valuuttamuunnin/valuutta-2.jpg'
 import valuutta3 from './images/portfolio/valuuttamuunnin/valuutta-3.jpg'
 import data1 from './images/portfolio/python/data-1.jpg'
-import data2 from './images/portfolio/python/data-2.jpg'
+import data2 from './images/portfolio/python/data-6.jpg'
 import data3 from './images/portfolio/python/data-3.jpg'
 import data4 from './images/portfolio/python/data-4.jpg'
 import data5 from './images/portfolio/python/data-5.jpg'
+import data6 from './images/portfolio/python/data-2.jpg'
+import ont1 from './images/portfolio/ont/ont-1.jpg'
+import ont2 from './images/portfolio/ont/ont-2.jpg'
+import ont3 from './images/portfolio/ont/ont-3.jpg'
+import ont4 from './images/portfolio/ont/ont-4.jpg'
+import kp1 from './images/portfolio/knapsack-prblm/knapsackprblm-1.png'
+import kp2 from './images/portfolio/knapsack-prblm/knapsackprblm-2.png'
+import kp3 from './images/portfolio/knapsack-prblm/knapsackprblm-3.png'
 
 export const portfolioDetails = [
+      {
+      src: ont1,
+      id: 0,
+      width: 1,
+      height: 1,
+      title: "Opinnäytetyö",
+      description1: `Opinnäytetyön kehittämistavoitteena oli toteuttaa responsiivinen verkkosovellus, joka käyttää REST API -rajapinnan yli tietokantaa ja toimii tarvittaessa ilman verkkoyhteyttä. Käyttöliittymän kehityksessä tuli huomioida QR-koodilukijan käyttö.`,
+      description3:` Palvelinsovellus kehitettiin ASP.NET Core -alustalle, jonka käyttämä tietokanta toteutettiin SQL Serverille. Relaatiotietokannan kanssa vuorovaikuttamaan valittiin Entity Framework Core -kehys. Selainsovellus rakennettiin Reactilla. QR-koodilukijaksi valittiin avoimen lähdekoodin sovellus, joka avaa laitteen kameran ja tunnistaa QR-koodin sisällön. Selainsovelluksen toiminta offline-tilassa toteutettiin progressiivisen verkkosovelluksen tekniikoin. Välimuistin käyttöstrategioita ovat Cache-first sekä Network-first. Kun käyttäjä tekee kirjauksen offline-tilassa, kirjauksen tiedot tallennetaan selaimen paikalliseen tietokantaan. Verkkoyhteyden palautuessa tiedot siirretään selaimen paikallisesta tietokannasta palvelimelle.`,
+      description2: `Kehitetyn sovelluksen tarkoituksena on auttaa tarkastusten, kuten teollisuuden laitetarkastusten, teossa. Sovellus esittää tietoja tarkastuksista ja niihin kuuluvista kohteista, lisäksi sillä voidaan suorittaa tarkastusten kirjauksia. Tietyn kohteen kirjausnäkymä voidaan avata lukemalla kohdetta vastaava QR-koodi.`,
+      addons: `Lopputyö arvioitiin arvosanalla 5. Tarkastajan arvio: Työssä huonoa on se, etten löytänyt siitä mitään puutteita.`,
+      link2: "https://www.theseus.fi/handle/10024/509411",
+      alts: "react asp.net software development pwa",
+      className : "img",
+      tags:[
+        {
+          tag: "React",
+        },
+        {
+          tag: "ASP.NET",
+        },
+        {
+          tag: "MS SQL Server",
+        },
+        {
+          tag: "PWA",
+        },
+      ],
+      content: [
+        {
+          src: ont2,
+        },
+        {
+          src: ont3,
+        },
+        {
+          src: ont4,
+        }
+      ]
+    },
+    {
+      src: rss1,
+      id: 1,
+      width: 1,
+      height: 1,
+      title: "Uutiset Covid-suodattimella",
+      description1: `Tuoreimmat uutiset RSS-syötteistä ilman Covid-aiheita`,
+      description2:`RSS-syötteinä käytetään Ylen, Ilta-Sanomien, Iltalehden ja Helsingin Sanomien tuoreimpia uutisia.`,
+      description3: `Backend Nodella, xml-data parsitaan xml2js-moduulilla. Backendissa suodatetaan korona-aiheet sekä järjestetään uutiset aikajärjestykseen. Frontend Reactilla. Käyttöliittymästä aiheita voi rajata uutisten tarjoajien kategorioiden perusteella.`,
+      link1: "https://github.com/helisusanna/covidfree-rss-news",
+      link2: "https://covidfree-rss-news.herokuapp.com/",
+      alt: "nodejs rss react javascript backend software development",
+      className : "img",
+      tags:[
+        {
+          tag: "Node",
+        },
+        {
+          tag: "React",
+        },
+        {
+          tag: "RSS",
+        },
+        {
+          tag: "XML",
+        },
+      ],
+      content: [
+        {
+          src: rss2,
+        },
+        {
+          src: rss3,
+        },
+        {
+          src: rss4,
+        },
+      ]
+    },
     {
       src: toko1,
-      id: 0,
+      id: 2,
       width: 1,
       height: 1,
       title: "TOKO-muistio",
@@ -59,7 +146,7 @@ export const portfolioDetails = [
       link1description: "Repositorio",
       link2: "https://helisusanna.github.io/TOKOmuistio/",
       link2description: "Esittely",
-      alts: "react native javascript mobile software development",
+      alts: "react native javascript mobile development",
       className : "img",
       tags:[
         {
@@ -67,9 +154,6 @@ export const portfolioDetails = [
         },
         {
           tag: "Android",
-        },
-        {
-          tag: "Design",
         },
       ],
       content: [
@@ -86,27 +170,30 @@ export const portfolioDetails = [
     },
     {
       src: laskuri1,
-      id: 1,
+      id: 3,
       width: 1,
       height: 1,
       title: "Koiran ravintolaskuri",
       description1: `Koiran ravintolaskuri on luotu erityisesti haiman vajaatoiminnasta kärsivien koirien ohjaajille.`,
       description2:`Laskuri laskee oikean määrän ravintoa sairaalle koiralle, ottaen huomioon sairauden hoitoon tarvittavat ravintolisät.
       Laskuri on suunniteltu ruokintamallille 50 % raakalihaa ja 50 % kuivaruokaa. Käyttäjä voi rekisteröityä palveluun ja tallentaa koirien ja laskurin antamat tiedot käyttäjätilin alle.`,
-      description3: `Käytetty Node.js ja MySQL.`,
+      description3: `Käytetty Node ja MySQL. Frontissa Noden EJS.`,
       link1: "https://github.com/helisusanna/sql-5050-laskuri",
       link2: "https://koiran-5050-laskuri.herokuapp.com/",
-      alt: "nodejs node javascript backend software development",
+      alt: "node javascript backend software development",
       className : "img",
       tags:[
         {
-          tag: "Node.js",
+          tag: "Node",
+        },
+        {
+          tag: "EJS",
+        },
+        {
+          tag: "SQL",
         },
         {
           tag: "CSS",
-        },
-        {
-          tag: "Design",
         },
       ],
       content: [
@@ -129,7 +216,7 @@ export const portfolioDetails = [
     },
     {
       src: qr1,
-      id: 2,
+      id: 4,
       width: 1,
       height: 1,
       title: "QR-lukija",
@@ -137,7 +224,7 @@ export const portfolioDetails = [
       description2: `Lukijan lisäksi mobiilisovellus paikantaa käyttäjän sijainnin ja hakee lähimmän Otto-automaatin tiedot. Tiedot haetaan JSON-tiedostosta.`,
       description3: `Luotu React Native ja Expo -tekniikoin.`,
       link1: "https://github.com/helisusanna/qr-scanner",
-      alt: "react native javascript mobile software development",
+      alt: "react native javascript mobile development",
       className : "img",
       tags:[
         {
@@ -155,7 +242,7 @@ export const portfolioDetails = [
     },
     {
       src: sijainti1,
-      id: 3,
+      id: 5,
       width: 1,
       height: 1,
       title: "Sijaintimuistio",
@@ -163,7 +250,7 @@ export const portfolioDetails = [
       description2: `Sijaintimuistio on tarkoitettu sijaintien paikantamiseen ja tallentamiseen. Sovelluksella voi ottaa kuvan esimerkiksi hyvästä sienestyspaikasta, kirjoittaa muistiinpanot sijainnista ja sovellus paikantaa sijainnin sekä ajankohdan automaattisesti.`,
       description3: `Luotu React Native ja Expo -tekniikoin. Tiedot tallentuvat sqlite-tietokantaan.`,
       link1: "https://github.com/helisusanna/sijaintimuistio",
-      alt: "react native javascript mobile software development",
+      alt: "react native javascript mobile development",
       className : "img",
       tags:[
         {
@@ -171,9 +258,6 @@ export const portfolioDetails = [
         },
         {
           tag: "Android",
-        },
-        {
-          tag: "Design",
         },
       ],
       content: [
@@ -184,7 +268,7 @@ export const portfolioDetails = [
     },
     {
       src: sketchuptalo0,
-      id: 4,
+      id: 6,
       width: 1,
       height: 1,
       title: "3D-talo",
@@ -228,46 +312,13 @@ export const portfolioDetails = [
       ]
     },
     {
-      src: rss1,
-      id: 5,
-      width: 1,
-      height: 1,
-      title: "RSS-Uutiset",
-      description1: `12 viimeisintä uutista RSS-syötteistä`,
-      description2:`Syötteinä käytetään Yleä, Ilta-Sanomia ja Helsingin Sanomia. Pääaiheena palvelinpuolen harjoittelu, design toteutettu vain Bootstrapilla.`,
-      description3: `Luotu Node.js-tekniikoin. Sovellus käyttää xml-datan parsimiseen xml2js-moduulia.`,
-      link1: "https://github.com/helisusanna/rss-uutiset",
-      link2: "https://rss-uutiset.herokuapp.com/",
-      alt: "nodejs rss javascript backend software development",
-      className : "img",
-      tags:[
-        {
-          tag: "Node.js",
-        },
-        {
-          tag: "RSS",
-        },
-        {
-          tag: "XML",
-        },
-      ],
-      content: [
-        {
-          src: rss2,
-        },
-        {
-          src: rss3,
-        },
-      ]
-    },
-    {
       src: blogi1,
-      id: 6,
+      id: 7,
       width: 1,
       height: 1,
       title: "Blogityökalu",
       description1: `Simppeli työkalu blogin ylläpitoon`,
-      description2:`Blogityökalulla voi luoda ja ylläpitää sisältöä. Ylläpito tapahtuu url-osoitteen /admin-päätteeltä. Pääaiheena palvelinpuolen harjoittelu, design toteutettu vain Bootstrapilla.
+      description2:`Blogityökalulla voi luoda ja ylläpitää sisältöä. Ylläpito tapahtuu url-osoitteen /admin-päätteeltä. Pääaiheena palvelinpuolen harjoittelu. Frontissa Noden EJS.
       Olen toteuttanut sovelluksia myös tietoturvallisesti, tämä jääköön avoimeksi työkaluksi.`,
       description3: `Luotu Node.js-tekniikoin.`,
       link1: "https://github.com/helisusanna/blogityokalu",
@@ -276,7 +327,10 @@ export const portfolioDetails = [
       className : "img",
       tags:[
         {
-          tag: "Node.js",
+          tag: "Node",
+        },
+        {
+          tag: "EJS",
         },
         {
           tag: "JSON",
@@ -293,7 +347,7 @@ export const portfolioDetails = [
     },
     {
       src: vy1,
-      id: 7,
+      id: 8,
       width: 1,
       height: 1,
       title: "Pelit ja VR",
@@ -351,18 +405,18 @@ export const portfolioDetails = [
     },
     {
       src: valuutta1,
-      id: 8,
+      id: 9,
       width: 1,
       height: 1,
       title: "Valuuttamuunnin",
       description1: `Euromääärän muuntaminen muuksi valuutaksi`,
-      description2: `Yksinkertainen web-sovellus Reactilla. Valuutat ja kurssit haetaan REST API rajapinnasta exchangeratesapi.io.`,
+      description2: `Yksinkertainen web-sovellus Reactilla. Valuutat ja kurssit haetaan Web API rajapinnasta exchangeratesapi.io.`,
       link1: "https://github.com/helisusanna/valuuttamuunnin",
       alt: "react api javascript",
       className : "img",
       tags:[
         {
-          tag: "React.js",
+          tag: "React",
         },
         {
           tag: " API",
@@ -378,13 +432,49 @@ export const portfolioDetails = [
       ]
     },
     {
+      src: kp1,
+      id: 10,
+      width: 1,
+      height: 1,
+      title: "Knapsack Problem",
+      description1: `Python-kielinen Ahne-algoritmi ratkaisee painotetun 0/1-reppuongelman`,
+      description2: `Ohjelma saa syötteenä joukon S, jonka alkiot ovat 3-tuplia (a,b,c), missä a on objektin nimi, b kyseisen objektin toteuttamisesta saatava hyötyluku ja c kyseisen objektin painoluku (tai toteuttamisesta aiheutuva kustannus). Lisäksi syötteenä annetaan suurin sallittu kokonaispaino (tai kokonaisbudjetti). Algortimi käyttää prioriteettijonoa ja selvittää reppuun laitettavien objektien nimet, repun kokonaishyödyn sekä kustannukset/painon.`,
+      description3: `Node-sovellus käyttää tätä Python algoritmia, käyttöliittymä toteutettu EJS. Sovellus voisi toimia esimerkiki projektinhallinnan apuna auttamaan hankintojen tekemisessä. Käyttöliittymää tulisi jatkokehittää siten, että objekteja voisi lisätä tai poistaa. Nyt vakiona on neljä objektia.`,
+      link1: "https://knapsackproblem.herokuapp.com/",
+      link2: "https://github.com/helisusanna/knapsack-problem",
+      alt: "python node algorithms greedy",
+      className : "img",
+      tags:[
+        {
+          tag: "Python",
+        },
+        {
+          tag: "Data",
+        },
+        {
+          tag: "Node",
+        },
+        {
+          tag: "Algorithms",
+        },
+      ],
+      content: [
+        {
+          src: kp2,
+        },
+        {
+          src: kp3,
+        },
+      ]
+    },
+    {
       src: data1,
-      id: 9,
+      id: 11,
       width: 1,
       height: 1,
       title: "Datan käsittely",
       description1: `Raporttejani datan käsittelystä`,
-      description2: `Osa opinnoistani on matematiikkaa, tietomassan analysointia ja visualisointia, tietorakenteiden ja algoritmien hallintaa. Ohessa raporttejani aiheista.`,
+      description2: `Osa opinnoistani on matematiikkaa, tietomassan analysointia ja visualisointia, tietorakenteiden, algoritmien ja niiden aikakompleksisuuden hallintaa tai vertailua. Ohessa raporttejani aiheista.`,
       description3: `Raportit ovat osin diskreettia matematiikkaa, aiheista graafiteoria, lineaarialgebrat ja joukko-oppi. Tietokannat ja SQL liittynee aiheisiin myös, joista olen myös käynyt erilliset opintojaksot.`,
       link2: "https://drive.google.com/file/d/1iG_7_G3p6aiAwEJRcjZORsM2BcqFiyB5/view?usp=sharing",
       alt: "python big data sql discrete math",
@@ -399,6 +489,9 @@ export const portfolioDetails = [
         {
           tag: "Discrete math",
         },
+        {
+          tag: "Algorithms",
+        },
       ],
       content: [
         {
@@ -412,6 +505,9 @@ export const portfolioDetails = [
         },
         {
           src: data5,
+        },
+        {
+          src: data6,
         },
       ]
     },

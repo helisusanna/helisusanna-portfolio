@@ -1,31 +1,16 @@
 import { React, useEffect, useState } from "react";
-import { makeStyles } from '@material-ui/core/styles';
-
+import { makeStyles, styled } from '@material-ui/core/styles';
 import './styles.css';
-
-import { Grid,
-        Divider,
-        Typography,
-        List,
-        ListItem,
-        ListItemIcon,
-        ListItemText,
-        Collapse,
-        Accordion,
-        AccordionSummary,
-        AccordionDetails,
-        }  from '@material-ui/core';
-
-/*images*/
+import { Grid, Divider, Button, Typography, List, ListItem, ListItemIcon, ListItemText, Accordion, AccordionSummary, AccordionDetails, }  from '@material-ui/core';
+import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
+//Images
 import backgroundImage from './images/section1.jpg'
-
-/*Icons*/
+//Icons
 import ExpandMore from '@material-ui/icons/ExpandMore'
-import ExpandLess from '@material-ui/icons/ExpandLess'
 import CodeIcon from '@material-ui/icons/Code';
 import WebIcon from '@material-ui/icons/Web';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
-import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
+import OpenInNew from '@material-ui/icons/OpenInNew';
 
 const useStyles = makeStyles((theme) => ({
     grid: {
@@ -123,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
     },
     merkonomika: {
         display: "none",
-        [theme.breakpoints.up('1610')]: {
+        [theme.breakpoints.up('1700')]: {
             display: "block",
         },
     },
@@ -131,21 +116,22 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('md')]: {
             display: "none",
         },
+    },
+    mr3:{
+        marginRight: theme.spacing(3),
     }
 }));
 
 function Home() {
     const classes = useStyles();
-
     const [expanded, setExpanded] = useState('panel2');
     const handleChange = (panel) => (event, isExpanded) => {
       setExpanded(isExpanded ? panel : false);
     };
-    
     const [ECTProgress, setECTProgress] = useState(0);
-    const [ECTValue, setECTValue] = useState(184);
+    const [ECTValue, setECTValue] = useState(210);
     const [KAProgress, setKAProgress] = useState(0);
-    const [KAValue, setKAValue] = useState(4.67);
+    const [KAValue, setKAValue] = useState(4.7);
 
     const Progress = () => {
             const timer = setInterval(() => {
@@ -155,7 +141,7 @@ function Home() {
     
             const timerka = setInterval(() => {
                 setKAProgress((prev) => 
-                (prev >= KAValue ? setKAProgress(KAValue) : prev + 1.17));
+                (prev >= KAValue ? setKAProgress(KAValue) : prev < 3.5 ? prev + 0.21 : prev + 0.59));
             }, 160);
     
             return () => {
@@ -166,6 +152,18 @@ function Home() {
     useEffect(() => {
         Progress();
     }, []);
+
+    const ThesisTooltip = styled(({ className, ...props }) => (
+        <Tooltip {...props} classes={{ popper: className }} />
+      ))(({ theme }) => ({
+        [`& .${tooltipClasses.tooltip}`]: {
+          backgroundColor: '#ededed',
+          color: 'rgba(0, 0, 0, 0.87)',
+          maxWidth: 650,
+          fontSize: theme.typography.pxToRem(12),
+          border: '2px solid #dadde9',
+        },
+      }));
     
     return (
 
@@ -176,21 +174,20 @@ function Home() {
         >
             <Grid item xs={12} sm={6} md={5} className={[classes.listMd, classes.gridItem]}>
                 <Typography variant="h2" id="tekofont">HELI SUSANNA</Typography>
-                <Typography>= <i>{"{business controller, designer, coder}"}</i></Typography>
                 <Divider/>
 
                 <div>
                     <List>
                         <ListItem>
                             <ListItemText>
-                                <b>Tietojenkäsittelyn opinnot ovat lopputyötä vaille valmiita</b>
+                                <b>Tietojenkäsittelyn opintoni valmistuvat tammikuuhun 2022 mennessä</b>
                             </ListItemText>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <CodeIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Etsin lopputyöpaikkaa ja valmistumisen jälkeen toivon työllistyväni koodin pariin"/>
+                            <ListItemText primary="Tavoitteenani on oppia osaavaksi fullstack-devaajaksi"/>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
@@ -202,16 +199,25 @@ function Home() {
                             <ListItemIcon>
                                 <WebIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Osaamista tällä hetkellä on eniten käyttöliittymistä ja liiketoiminnasta"/>
+                            <ListItemText primary="Suosikkitekniikoina modernit JS-kirjastot ja datan käsittelyssä Python"/>
                         </ListItem>
                     </List>
                     <Divider/>
                     <List>
                         <ListItem>
-                            <ListItemIcon>
-                                <ArrowForwardIosIcon/>
-                            </ListItemIcon>
-                            <ListItemText primary="Informaatioteknologian tradenomi" secondary="Kaakkois-Suomen ammattikorkeakoulu | 2019-"/>
+                            <Typography variant="h4">IT-Tradenomi</Typography>
+                        </ListItem>
+                        <ListItem>
+                            <ThesisTooltip placement="right" title={ <><Typography color="inherit">Verkkosovelluksen kehitys huomioiden käyttö offline-tilassa</Typography>
+                                <><br/><b>{'React, '}</b><b>{'ASP.NET Core, '}</b><b>{'PWA, '}</b><b>{'Fullstack '}</b><br/><br/></> 
+                                <p>{"Opinnäytetyön kehittämistavoitteena oli toteuttaa responsiivinen verkkosovellus, joka käyttää REST API -rajapinnan yli tietokantaa ja toimii tarvittaessa ilman verkkoyhteyttä. Käyttöliittymän kehityksessä tuli huomioida QR-koodilukijan käyttö."}</p>
+                                <br/><p>{"Palvelinsovellus kehitettiin ASP.NET Core -alustalle, jonka käyttämä tietokanta toteutettiin SQL Serverille. Relaatiotietokannan kanssa vuorovaikuttamaan valittiin Entity Framework Core -kehys. Selainsovellus rakennettiin Reactilla, jonka käyttöliittymän kehitykseen käytettiin Material-UI-komponentteja. QR-koodilukijaksi valittiin avoimen lähdekoodin sovellus, joka avaa laitteen kameran ja tunnistaa QR-koodin sisällön. Selainsovelluksen toiminta offline-tilassa toteutettiin progressiivisen verkkosovelluksen tekniikoin."}</p>
+                               </>}> 
+                                <Button startIcon={<OpenInNew/>} target="_blank" href="https://www.theseus.fi/handle/10024/509411">Opinnäytetyö julkaistu joulukuussa 2021</Button>
+                            </ThesisTooltip>
+                        </ListItem>
+                        <ListItem>
+                            <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, informaatioteknologia" secondary="2019-2022"/>
                         </ListItem>
                     </List>
                     <Grid container md={12} className={classes.gridInside}>
@@ -224,17 +230,15 @@ function Home() {
                             <Typography variant="h2" component="h3" id="tekofont">{ECTProgress}<span id="tekofont" className={classes.smfont}>/210</span></Typography>
                         </Grid>
                     </Grid>
-
+                    <Divider/>
                     <List>
                         <ListItem>
-                            <ListItemIcon>
-                                <ArrowForwardIosIcon/>
-                            </ListItemIcon>
-                            <ListItemText primary="Merkonomi" secondary="Liiketalous ja hallinto | 2012-2015"/>
+                            <Typography variant="h4" className={classes.mr3}>Merkonomi</Typography>
+                            <ListItemText primary="Liiketalous ja hallinto" secondary="2012-2015"/>
                         </ListItem>
                     </List>
                     <Grid item md={6} className={[classes.gridInside, classes.merkonomika]}>
-                        <Typography variant="h6" id="tekofont">NÄYTTÖTODISTUKSEN KESKIARVO</Typography>
+                        <Typography variant="h6" id="tekofont">NÄYTTÖJEN KESKIARVO</Typography>
                         <Typography variant="h2" component="h3" id="tekofont">3<span id="tekofont" className={classes.smfont}>/3</span></Typography>
                     </Grid>
 
@@ -252,7 +256,7 @@ function Home() {
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
                         >
-                            <Typography>Tietojenkäsittelyn opinnot ovat lopputyötä vaille valmiita</Typography>
+                            <Typography>Tietojenkäsittelyn opintoni valmistuvat tammikuuhun 2022 mennessä</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
@@ -260,7 +264,7 @@ function Home() {
                                     <ListItemIcon>
                                         <CodeIcon/>
                                     </ListItemIcon>
-                                    <ListItemText primary="Etsin lopputyöpaikkaa ja valmistumisen jälkeen toivon työllistyväni koodin pariin"/>
+                                    <ListItemText primary="Tavoitteenani on oppia osaavaksi fullstack-devaajaksi"/>
                                 </ListItem>
                                 <ListItem>
                                     <ListItemIcon>
@@ -272,7 +276,7 @@ function Home() {
                                     <ListItemIcon>
                                         <WebIcon/>
                                     </ListItemIcon>
-                                    <ListItemText primary="Osaamista tällä hetkellä on eniten käyttöliittymistä ja liiketoiminnasta"/>
+                                    <ListItemText primary="Suosikkitekniikoina modernit JS-kirjastot ja datan käsittelyssä Python"/>
                                 </ListItem>
                             </List>
                         </AccordionDetails>
@@ -283,12 +287,21 @@ function Home() {
                         aria-controls="panel2bh-content"
                         id="panel2bh-header"
                         >
-                            <Typography>Informaatioteknologian tradenomi</Typography>
+                            <Typography variant="h5">IT-Tradenomi</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
                                 <ListItem>
-                                    <ListItemText primary="Kaakkois-Suomen ammattikorkeakoulu | 2019-"/>
+                                    <ThesisTooltip placement="right" title={ <><Typography color="inherit">Verkkosovelluksen kehitys huomioiden käyttö offline-tilassa</Typography>
+                                        <><br/><b>{'React, '}</b><b>{'ASP.NET Core, '}</b><b>{'PWA, '}</b><b>{'Fullstack '}</b><br/><br/></> 
+                                        <p>{"Opinnäytetyön kehittämistavoitteena oli toteuttaa responsiivinen verkkosovellus, joka käyttää REST API -rajapinnan yli tietokantaa ja toimii tarvittaessa ilman verkkoyhteyttä. Käyttöliittymän kehityksessä tuli huomioida QR-koodilukijan käyttö."}</p>
+                                        <br/><p>{"Palvelinsovellus kehitettiin ASP.NET Core -alustalle, jonka käyttämä tietokanta toteutettiin SQL Serverille. Relaatiotietokannan kanssa vuorovaikuttamaan valittiin Entity Framework Core -kehys. Selainsovellus rakennettiin Reactilla, jonka käyttöliittymän kehitykseen käytettiin Material-UI-komponentteja. QR-koodilukijaksi valittiin avoimen lähdekoodin sovellus, joka avaa laitteen kameran ja tunnistaa QR-koodin sisällön. Selainsovelluksen toiminta offline-tilassa toteutettiin progressiivisen verkkosovelluksen tekniikoin."}</p>
+                                    </>}> 
+                                        <Button startIcon={<OpenInNew/>} target="_blank" href="https://www.theseus.fi/handle/10024/509411">Opinnäytetyö julkaistu joulukuussa 2021</Button>
+                                    </ThesisTooltip>
+                                </ListItem>
+                                <ListItem>
+                                    <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, informaatioteknologia" secondary="2019-2022"/>
                                 </ListItem>
                                 <ListItem>
                                     <Typography variant="h6" id="tekofont">KESKIARVO</Typography>
@@ -311,15 +324,15 @@ function Home() {
                         aria-controls="panel3bh-content"
                         id="panel3bh-header"
                         >
-                            <Typography>Liiketalouden merkonomi</Typography>
+                            <Typography variant="h5">Liiketalouden merkonomi</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
                             <List>
                                 <ListItem>
-                                    <ListItemText primary="Etelä-Kymenlaakson ammattiopisto | 2012-2015"/>
+                                    <ListItemText primary="Liiketalous ja hallinto" secondary="2012-2015"/>
                                 </ListItem>
                                 <ListItem>
-                                    <Typography variant="h6" id="tekofont">NÄYTTÖTODISTUKSEN KESKIARVO</Typography>
+                                    <Typography variant="h6" id="tekofont">NÄYTTÖJEN KESKIARVO</Typography>
                                 </ListItem>
                                 <ListItem>
                                     <Typography variant="h2" component="h3" id="tekofont">3<span id="tekofont" className={classes.smfont}>/3</span></Typography>

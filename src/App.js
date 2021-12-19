@@ -2,13 +2,7 @@ import { React, useRef, useState, useEffect } from 'react';
 import { withStyles, makeStyles, useTheme, createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import './index.css';
 //----Material-ui
-import { AppBar,
-        Avatar,
-        Tooltip,
-        Fab, 
-        Button,
-        Box,
-        } from '@material-ui/core';
+import { AppBar, Avatar, Tooltip, Fab, Button, Box, } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -295,7 +289,7 @@ function App(props) {
         </Tooltip>
           <div className={classes.drawerInfotxt}>
             <p>Heli Hyttinen</p>
-            <p>helisusanna.dev@gmail.com</p>
+            <p>helihyttine@gmail.com</p>
             <p>040 773 5430</p>
           </div>
         </div>
@@ -339,7 +333,7 @@ function App(props) {
                       className={classes.instagramIconMd}
                       component="a"
                       target="_blank"
-                      href={`https://www.instagram.com/helisusanna.dev/`}>
+                      href={`https://www.instagram.com/helisusanna.ig/`}>
                         <InstagramIcon/>
                       </IconButton>
                     </Tooltip>

@@ -1,26 +1,15 @@
-import { React, useCallback, useState, useEffect, useRef, withStyles } from "react";
+import { React, useState, useEffect, useRef } from "react";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { makeStyles, useTheme, createMuiTheme, ThemeProvider  } from '@material-ui/core/styles';
+import { makeStyles, useTheme, ThemeProvider  } from '@material-ui/core/styles';
 import './portfolio.css';
 import './scripts.js';
 import './styles.css';
-
-import Gallery from "react-photo-gallery";
 import { portfolioDetails } from "./portfolioDetails";
+// Icons
 import { KeyboardArrowLeft, KeyboardArrowRight, AddSharp, Close, GitHub} from '@material-ui/icons';
 import OpenInBrowser from '@material-ui/icons/OpenInNewOutlined';
-
-import { Button, 
-        Typography,
-        Divider,
-        Avatar,
-        Fab,
-        IconButton,
-        Grid,
-        Chip,
-        MobileStepper,
-        Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, 
-        }  from '@material-ui/core';
+// Material-UI
+import { Button, Typography, Divider, Avatar, Fab, IconButton, Grid, Chip, MobileStepper, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, }  from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     conGrid: {
@@ -36,15 +25,9 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         opacity: 0.5,
-        [theme.breakpoints.down('xs')]: {
-            padding: theme.spacing(2),
-        },
+        marginLeft:theme.spacing(1),
     },
     headerDivider: {
-        [theme.breakpoints.down('xs')]: {
-            marginLeft: theme.spacing(2),
-            marginRight: theme.spacing(2),
-        },
         marginBottom: theme.spacing(6),
     },
     img: {
@@ -71,11 +54,17 @@ const useStyles = makeStyles((theme) => ({
     titleChip: {
         margin: theme.spacing(2),
     },
+    chip: {
+        margin: '1%',
+    },
     contentText: {
         margin: theme.spacing(2),
     },
     dialogbtn: {
         marginLeft: theme.spacing(4),
+    },
+    mt2: {
+        marginTop: theme.spacing(2),
     }
 }));
 
@@ -157,7 +146,7 @@ function Portfolio() {
         for(const photo in portfolioDetails){
             if(portfolioDetails[photo].id === id){
                 for(const tag in portfolioDetails[photo].tags){
-                    chips.push(<Chip label={`${Object.values(portfolioDetails[photo].tags[tag])}`} color="secondary" />)
+                    chips.push(<Chip className={classes.chip} label={`${Object.values(portfolioDetails[photo].tags[tag])}`} color="secondary" />)
                 }
             }
         }
@@ -172,7 +161,7 @@ function Portfolio() {
             direction="row"
             justify="center"
             spacing={1}>
-            <Grid item xs={12} sm={8} md={8} lg={12}>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography variant="h2" className={classes.header}>Portfolio</Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -246,6 +235,9 @@ function Portfolio() {
                             <Typography variant="h6">{portfolioDetails[currentImage].description1}</Typography><br/>
                             <p>{portfolioDetails[currentImage].description2}</p><br/>
                             <p>{portfolioDetails[currentImage].description3}</p>
+                            {(portfolioDetails[currentImage].addons)
+                            ?<div className={classes.mt2}><p>{portfolioDetails[currentImage].addons}</p></div>
+                            :null}
                         </DialogContentText>
 
                     </DialogContent>

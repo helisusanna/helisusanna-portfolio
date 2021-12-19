@@ -1,28 +1,17 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
-
-import { Grid, 
-        Container,
-        Avatar,
-        Divider,
-        Typography,
-        List,
-        ListItem,
-        ListItemIcon,
-        ListItemText,
-        Tooltip,
-     }  from '@material-ui/core';
-
+// Material-ui
+import { Grid, Container, Avatar, Divider, Typography, List, ListItem, ListItemIcon, ListItemText, Tooltip, }  from '@material-ui/core';
+// icons
 import google1 from './icons/ads-google.png'
 import google2 from './icons/measurement-google.png'
 import google3 from './icons/digital-google.png'
-
+// images
 import avatarHs from './images/avatar/avatarhs.jpg'
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import MailIcon from '@material-ui/icons/Mail';
 import LocationIcon from '@material-ui/icons/LocationOn';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import Copyright from '@material-ui/icons/Copyright';
 
 const drawerWidth = 250;
 const useStyles = makeStyles((theme) => ({
@@ -115,7 +104,7 @@ function Footer() {
                                     <ListItem className={classes.hideXs}>
                                         <ListItemIcon><MailIcon color="primary" fontSize="small"/></ListItemIcon>
                                         <ListItemText
-                                            primary="helisusanna.dev@gmail.com"
+                                            primary="helihyttine@gmail.com"
                                         />
                                     </ListItem>
                                 </Tooltip>

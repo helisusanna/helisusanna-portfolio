@@ -2,11 +2,10 @@ import { React, useEffect, useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import './styles.css';
 import './scripts.js';
-
-/*images*/
+import {CircleProgress} from 'react-gradient-progress'
+// images
 import pieImage from './images/part_piechart_2.png'
-
-/*avatars*/
+// avatars
 import jsAvatar from './images/avatar/js.png'
 import cssAvatar from './images/avatar/css.png'
 import reactAvatar from './images/avatar/react.png'
@@ -16,7 +15,7 @@ import phpAvatar from './images/avatar/php.png'
 import pyAvatar from './images/avatar/py.png'
 import jupAvatar from './images/avatar/jup.png'
 import sqlAvatar from './images/avatar/sql.png'
-import azureAvatar from './images/avatar/azure.png'
+import restAvatar from './images/avatar/rest.png'
 import jsonAvatar from './images/avatar/json.png'
 import xmlAvatar from './images/avatar/xml.png'
 import adobeAvatar from './images/avatar/adobe.png'
@@ -34,26 +33,12 @@ import crmAvatar from './images/avatar/crm.png'
 import officeAvatar from './images/avatar/office.png'
 import msAvatar from './images/avatar/ms.png'
 import excelAvatar from './images/avatar/excel.png'
-
+// icons
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Check from '@material-ui/icons/CheckCircleOutlineOutlined';
-
-import {CircleProgress} from 'react-gradient-progress'
-
-import { Grid, 
-        Button,
-        List,
-        ListItem,
-        Divider,
-        Collapse,
-        LinearProgress,
-        Typography,
-        Box,
-        Chip,
-        Avatar,
-    }  from '@material-ui/core';
-import { FilterCenterFocusOutlined, SendTwoTone } from "@material-ui/icons";
+// Material-ui
+import { Grid, List, Divider, Collapse, LinearProgress, Typography, Box, Chip, Avatar,}  from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -61,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
     },
     header: {
         opacity: 0.5,
+        marginLeft:theme.spacing(1),
     },
     conGrid: {
         [theme.breakpoints.up('sm')]: {
@@ -127,6 +113,8 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     chip: {
+        backgroundColor: 'transparent',
+        border: 'solid #CCCCCC 0.5px',
         margin: "1%",
     },
     pointer: {
@@ -181,9 +169,9 @@ function About() {
     const classes = useStyles();
 
     const [codingProgress, setCodingProgress] = useState(0);
-    const [codingValue, setCodingValue] = useState(60);
-    const [frontValue, setFrontValue] = useState(70);
-    const [backValue, setBackValue] = useState(60);
+    const [codingValue, setCodingValue] = useState(65);
+    const [frontValue, setFrontValue] = useState(80);
+    const [backValue, setBackValue] = useState(70);
     const [dataValue, setDataValue] = useState(55);
     const [mobileValue, setMobileValue] = useState(30);
 
@@ -244,7 +232,7 @@ function About() {
         justify="center"
         alignItems="center" 
         >
-            <Grid item xs={12} sm={8} md={8} lg={12} className={classes.itemGrid}>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography variant="h2" className={classes.header}>About</Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -275,10 +263,10 @@ function About() {
                 <Grid item xs={12} sm={12} md={4} lg={12} className={classes.itemGrid}>
                     <Typography variant="h6" id="tekofont">Part coder</Typography>
                     <ui className={classes.p}>
-                        <li>Opiskellut sekä tehnyt omia front ja back -puolen pieniä projekteja.</li>
-                        <li>Matemaattisesti lahjakas, hallitsen tietorakenteet ja ymmärrän algoritmeja.</li>
-                        <li>Opinnoista kolmasosa koodausta.</li>
-                        <li>Opin minkä vain ohjelmointikielen ja osaan varmasti käyttää jokaista tietojärjestelmää.</li>
+                        <li>Opiskellut sekä tehnyt omia front ja back -puolen projekteja.</li>
+                        <li>Matemaattisesti lahjakas, hallitsen tietorakenteet ja osaan arvioida algoritmeja.</li>
+                        <li>Tietojenkäsittelyn opintojen painotus ohjelmistokehityksessä.</li>
+                        <li>Tutuimmat tekniikat ja työvälineet; React, - Native, Node, Python, C#, Microsoft</li>
                     </ui>
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} lg={12} className={classes.itemGrid}>
@@ -342,8 +330,8 @@ function About() {
                                 <Chip avatar={<Avatar alt="PHP" src={phpAvatar} />} label="PHP" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="Python" src={pyAvatar} />} label="Python" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="Jupyter" src={jupAvatar} />} label="Jupyter" className={classes.chip} />
-                                <Chip avatar={<Avatar alt="SQL" src={sqlAvatar} />} label="SQL" className={classes.chip} />
-                                <Chip avatar={<Avatar alt="Azure" src={azureAvatar} />} label="Azure" className={classes.chip} />
+                                <Chip avatar={<Avatar alt="SQL/NoSQL" src={sqlAvatar} />} label="SQL/NoSQL" className={classes.chip} />
+                                <Chip avatar={<Avatar alt="REST" src={restAvatar} />} label="REST" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="JSON" src={jsonAvatar} />} label="JSON" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="XML" src={xmlAvatar} />} label="XML" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="SSMS" src={sqlAvatar} />} label="SSMS" className={classes.chip}/>
@@ -363,8 +351,8 @@ function About() {
                     <Chip avatar={<Avatar alt="PHP" src={phpAvatar} />} label="PHP" className={classes.chip} />
                     <Chip avatar={<Avatar alt="Python" src={pyAvatar} />} label="Python" className={classes.chip} />
                     <Chip avatar={<Avatar alt="Jupyter" src={jupAvatar} />} label="Jupyter" className={classes.chip} />
-                    <Chip avatar={<Avatar alt="SQL" src={sqlAvatar} />} label="SQL" className={classes.chip} />
-                    <Chip avatar={<Avatar alt="Azure" src={azureAvatar} />} label="Azure" className={classes.chip}/>
+                    <Chip avatar={<Avatar alt="SQL/NoSQL" src={sqlAvatar} />} label="SQL/NoSQL" className={classes.chip} />
+                    <Chip avatar={<Avatar alt="REST" src={restAvatar} />} label="REST" className={classes.chip} />
                     <Chip avatar={<Avatar alt="JSON" src={jsonAvatar} />} label="JSON" className={classes.chip} />
                     <Chip avatar={<Avatar alt="XML" src={xmlAvatar} />} label="XML" className={classes.chip} />
                     <Chip avatar={<Avatar alt="SSMS" src={sqlAvatar} />} label="SSMS" className={classes.chip}/>
@@ -511,7 +499,7 @@ function About() {
         justify="center"
         alignItems="center" 
         >
-            <Grid item xs={12} sm={8} md={8} lg={12} className={classes.itemGrid}>
+            <Grid item xs={12} sm={12} md={12} lg={12}>
                 <Typography variant="h5" className={classes.header}>Supervoimat</Typography>
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12}>
