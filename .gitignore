@@ -5,6 +5,7 @@
 /ipublic
 /.pnp
 .pnp.js
+.iiindex.html
 
 # testing
 /coverage

@@ -51,11 +51,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: "#FFE821",
         "&:hover":{backgroundColor:"#FFB814"}
     },
-    titleChip: {
-        margin: theme.spacing(2),
-    },
     chip: {
-        margin: '1%',
+        marginRight: '1%',
     },
     contentText: {
         margin: theme.spacing(2),
@@ -177,7 +174,7 @@ function Portfolio() {
                             id={photo.className}
                             onClick={() => { handleOpenMd(photo.id)}}/>
                             <div id="overlay" onClick={() => { handleOpenMd(photo.id)}}>      
-                                <Chip color="primary" size="small" label={photo.title} className={classes.titleChip}/>   
+                                <Chip color="primary" size="small" label={photo.title}/>   
                                 <div id="chips">
                                 <Fab className={classes.fab} onClick={() => { handleOpen(photo.id)}}>
                                     <AddSharp/>

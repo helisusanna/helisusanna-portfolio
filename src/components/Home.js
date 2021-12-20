@@ -25,8 +25,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             backgroundSize: "300%"
         },
-        width: '100vw',
-        height: '100vh'
+        width: '100vw',   
     },
     gridItem: {
         paddingTop: theme.spacing(8),

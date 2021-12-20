@@ -114,7 +114,9 @@ const useStyles = makeStyles((theme) => ({
   drawerInfo: {
     marginLeft: theme.spacing(2),
     [theme.breakpoints.up('md')]: {
-      marginTop: theme.spacing(50),
+      marginBottom: theme.spacing(1),
+      bottom: 0,
+      position: 'absolute',
     },
     [theme.breakpoints.down('sm')]: {
       display: "none",
