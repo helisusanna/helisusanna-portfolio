@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap');
 * {
   margin: 0;
+  font-family: 'Jura', sans-serif !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Jura', 'Roboto', 'Helvetica Neue',
     sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
