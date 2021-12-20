@@ -3,6 +3,7 @@
 # dependencies
 /node_modules
 /ipublic
+/iipublic
 /.pnp
 .pnp.js
 iiindex.html*
