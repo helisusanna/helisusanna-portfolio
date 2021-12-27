@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.9ea2f238.chunk.css",
-    "main.js": "/static/js/main.aadbb544.chunk.js",
-    "main.js.map": "/static/js/main.aadbb544.chunk.js.map",
+    "main.js": "/static/js/main.a61ba110.chunk.js",
+    "main.js.map": "/static/js/main.a61ba110.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7e3e381.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7e3e381.js.map",
     "static/js/2.790f1429.chunk.js": "/static/js/2.790f1429.chunk.js",
@@ -90,15 +90,15 @@
     "static/media/tokomuistio-3.5ed1333e.jpg": "/static/media/tokomuistio-3.5ed1333e.jpg",
     "static/media/tokomuistio-4.087e45e8.jpg": "/static/media/tokomuistio-4.087e45e8.jpg",
     "static/media/unity.6f6e9ae2.png": "/static/media/unity.6f6e9ae2.png",
-    "static/media/valuutta-1.646c6f68.jpg": "/static/media/valuutta-1.646c6f68.jpg",
-    "static/media/valuutta-2.1bf6eae1.jpg": "/static/media/valuutta-2.1bf6eae1.jpg",
-    "static/media/valuutta-3.0e98ef79.jpg": "/static/media/valuutta-3.0e98ef79.jpg",
+    "static/media/valuutta-1.071af242.png": "/static/media/valuutta-1.071af242.png",
+    "static/media/valuutta-2.f1fe7001.png": "/static/media/valuutta-2.f1fe7001.png",
+    "static/media/valuutta-3.e1bd2dc6.png": "/static/media/valuutta-3.e1bd2dc6.png",
     "static/media/vy-1.cf1c84f8.jpg": "/static/media/vy-1.cf1c84f8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c7e3e381.js",
     "static/js/2.790f1429.chunk.js",
     "static/css/main.9ea2f238.chunk.css",
-    "static/js/main.aadbb544.chunk.js"
+    "static/js/main.a61ba110.chunk.js"
   ]
 }

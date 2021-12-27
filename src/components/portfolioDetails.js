@@ -37,9 +37,9 @@ import vy7 from './images/portfolio/vrymparisto_pelit/roskankeraaja-1.jpg'
 import vy8 from './images/portfolio/vrymparisto_pelit/roskankeraaja-2.jpg'
 import vy9 from './images/portfolio/vrymparisto_pelit/roskankeraaja-3.jpg'
 import vy10 from './images/portfolio/vrymparisto_pelit/roskankeraaja-4.jpg'
-import valuutta1 from './images/portfolio/valuuttamuunnin/valuutta-1.jpg'
-import valuutta2 from './images/portfolio/valuuttamuunnin/valuutta-2.jpg'
-import valuutta3 from './images/portfolio/valuuttamuunnin/valuutta-3.jpg'
+import valuutta1 from './images/portfolio/valuuttamuunnin/valuutta-1.png'
+import valuutta2 from './images/portfolio/valuuttamuunnin/valuutta-2.png'
+import valuutta3 from './images/portfolio/valuuttamuunnin/valuutta-3.png'
 import data1 from './images/portfolio/python/data-1.jpg'
 import data2 from './images/portfolio/python/data-6.jpg'
 import data3 from './images/portfolio/python/data-3.jpg'
@@ -408,11 +408,11 @@ export const portfolioDetails = [
       id: 9,
       width: 1,
       height: 1,
-      title: "Valuuttamuunnin",
-      description1: `Euromääärän muuntaminen muuksi valuutaksi`,
-      description2: `Yksinkertainen web-sovellus Reactilla. Valuutat ja kurssit haetaan Web API rajapinnasta exchangeratesapi.io.`,
-      link1: "https://github.com/helisusanna/valuuttamuunnin",
-      alt: "react api javascript",
+      title: "Offline Valuuttamuunnin",
+      description1: `Euromäärän muuttaminen muuksi valuutaksi PWA-sovelluksella`,
+      description2: `PWA-sovellus Reactilla. Valuutat ja kurssit haetaan Web API rajapinnasta exchangeratesapi.io. Service Worker tallentaa tiedot kerran päivässä välimuistiin.`,
+      link1: "https://github.com/helisusanna/currency-conventer",
+      alt: "react api javascript pwa",
       className : "img",
       tags:[
         {
@@ -420,6 +420,9 @@ export const portfolioDetails = [
         },
         {
           tag: " API",
+        },
+        {
+          tag: "PWA",
         },
       ],
       content: [
