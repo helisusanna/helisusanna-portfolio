@@ -186,13 +186,13 @@ function Home() {
                             <ListItemIcon>
                                 <CodeIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Tavoitteenani on oppia osaavaksi fullstack-devaajaksi"/>
+                            <ListItemText primary="Tavoitteena kasvaa osaavaksi fullstack-devaajaksi"/>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
                                 <ThumbUpIcon/>
                             </ListItemIcon>
-                            <ListItemText primary="Minulla on useita mielenkiinnon kohteita ja olen avoin hyvin monipuolisiin tehtäviin"/>
+                            <ListItemText primary="Osaamista eri it- ja liiketalouden osa-alueilta. Uskon että ihan kaiken voi oppia!"/>
                         </ListItem>
                         <ListItem>
                             <ListItemIcon>
@@ -216,7 +216,7 @@ function Home() {
                             </ThesisTooltip>
                         </ListItem>
                         <ListItem>
-                            <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, informaatioteknologia" secondary="2019-2022"/>
+                            <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, tietojenkäsittely" secondary="2019-2022"/>
                         </ListItem>
                     </List>
                     <Grid container md={12} className={classes.gridInside}>
@@ -263,13 +263,13 @@ function Home() {
                                     <ListItemIcon>
                                         <CodeIcon/>
                                     </ListItemIcon>
-                                    <ListItemText primary="Tavoitteenani on oppia osaavaksi fullstack-devaajaksi"/>
+                                    <ListItemText primary="Tavoitteena kasvaa osaavaksi fullstack-devaajaksi"/>
                                 </ListItem>
                                 <ListItem>
                                     <ListItemIcon>
                                         <ThumbUpIcon/>
                                     </ListItemIcon>
-                                    <ListItemText primary="Minulla on useita mielenkiinnon kohteita ja olen avoin hyvin monipuolisiin tehtäviin"/>
+                                    <ListItemText primary="Osaamista eri it- ja liiketalouden osa-alueilta. Uskon että ihan kaiken voi oppia!"/>
                                 </ListItem>
                                 <ListItem>
                                     <ListItemIcon>
@@ -300,7 +300,7 @@ function Home() {
                                     </ThesisTooltip>
                                 </ListItem>
                                 <ListItem>
-                                    <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, informaatioteknologia" secondary="2019-2022"/>
+                                    <ListItemText  primary="Kaakkois-Suomen ammattikorkeakoulu, tietojenkäsittely" secondary="2019-2022"/>
                                 </ListItem>
                                 <ListItem>
                                     <Typography variant="h6" id="tekofont">KESKIARVO</Typography>

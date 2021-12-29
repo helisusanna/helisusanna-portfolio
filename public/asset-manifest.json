@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.9ea2f238.chunk.css",
-    "main.js": "/static/js/main.a61ba110.chunk.js",
-    "main.js.map": "/static/js/main.a61ba110.chunk.js.map",
+    "main.js": "/static/js/main.29c76609.chunk.js",
+    "main.js.map": "/static/js/main.29c76609.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c7e3e381.js",
     "runtime-main.js.map": "/static/js/runtime-main.c7e3e381.js.map",
     "static/js/2.790f1429.chunk.js": "/static/js/2.790f1429.chunk.js",
@@ -17,6 +17,7 @@
     "static/media/ai.0a871787.png": "/static/media/ai.0a871787.png",
     "static/media/ankkajahti-1.69ff91ea.jpg": "/static/media/ankkajahti-1.69ff91ea.jpg",
     "static/media/avatarhs.b77301c1.jpg": "/static/media/avatarhs.b77301c1.jpg",
+    "static/media/azure.e21911a3.png": "/static/media/azure.e21911a3.png",
     "static/media/bg-trans.09e8a835.png": "/static/media/bg-trans.09e8a835.png",
     "static/media/bg.c809aa08.png": "/static/media/bg.c809aa08.png",
     "static/media/blogi-1.cd75155a.jpg": "/static/media/blogi-1.cd75155a.jpg",
@@ -50,6 +51,7 @@
     "static/media/laskuri-5.7f9f8740.jpg": "/static/media/laskuri-5.7f9f8740.jpg",
     "static/media/laskuri-6.1bb6f131.jpg": "/static/media/laskuri-6.1bb6f131.jpg",
     "static/media/measurement-google.6f2c1d6f.png": "/static/media/measurement-google.6f2c1d6f.png",
+    "static/media/netcore.3a945cc0.png": "/static/media/netcore.3a945cc0.png",
     "static/media/node.9fa0ada8.png": "/static/media/node.9fa0ada8.png",
     "static/media/ont-1.555b6122.jpg": "/static/media/ont-1.555b6122.jpg",
     "static/media/ont-2.ee26231c.jpg": "/static/media/ont-2.ee26231c.jpg",
@@ -75,7 +77,7 @@
     "static/media/rss-2.0f201f34.png": "/static/media/rss-2.0f201f34.png",
     "static/media/rss-3.cd4a0e46.png": "/static/media/rss-3.cd4a0e46.png",
     "static/media/rss-4.10e5bada.png": "/static/media/rss-4.10e5bada.png",
-    "static/media/section1.e5749c06.jpg": "/static/media/section1.e5749c06.jpg",
+    "static/media/section1.60a113d7.jpg": "/static/media/section1.60a113d7.jpg",
     "static/media/sijaintimuistio-1.558fb50a.jpg": "/static/media/sijaintimuistio-1.558fb50a.jpg",
     "static/media/sijaintimuistio-2.2b4c4ed8.jpg": "/static/media/sijaintimuistio-2.2b4c4ed8.jpg",
     "static/media/sketchuptalo-0.9a12e9b0.jpg": "/static/media/sketchuptalo-0.9a12e9b0.jpg",
@@ -84,21 +86,22 @@
     "static/media/sketchuptalo-3.fd29b586.jpg": "/static/media/sketchuptalo-3.fd29b586.jpg",
     "static/media/sketchuptalo-4.0c4fd895.jpg": "/static/media/sketchuptalo-4.0c4fd895.jpg",
     "static/media/sketchuptalo-5.c2850bad.jpg": "/static/media/sketchuptalo-5.c2850bad.jpg",
+    "static/media/sqlserver.3e578877.png": "/static/media/sqlserver.3e578877.png",
     "static/media/sup.274440e5.png": "/static/media/sup.274440e5.png",
     "static/media/tokomuistio-1.b2b3b112.png": "/static/media/tokomuistio-1.b2b3b112.png",
     "static/media/tokomuistio-2.8b67a3a9.jpg": "/static/media/tokomuistio-2.8b67a3a9.jpg",
     "static/media/tokomuistio-3.5ed1333e.jpg": "/static/media/tokomuistio-3.5ed1333e.jpg",
     "static/media/tokomuistio-4.087e45e8.jpg": "/static/media/tokomuistio-4.087e45e8.jpg",
     "static/media/unity.6f6e9ae2.png": "/static/media/unity.6f6e9ae2.png",
-    "static/media/valuutta-1.071af242.png": "/static/media/valuutta-1.071af242.png",
-    "static/media/valuutta-2.f1fe7001.png": "/static/media/valuutta-2.f1fe7001.png",
-    "static/media/valuutta-3.e1bd2dc6.png": "/static/media/valuutta-3.e1bd2dc6.png",
+    "static/media/valuutta-1.2c1ba93f.png": "/static/media/valuutta-1.2c1ba93f.png",
+    "static/media/valuutta-2.55421efc.png": "/static/media/valuutta-2.55421efc.png",
+    "static/media/valuutta-3.84b23727.png": "/static/media/valuutta-3.84b23727.png",
     "static/media/vy-1.cf1c84f8.jpg": "/static/media/vy-1.cf1c84f8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.c7e3e381.js",
     "static/js/2.790f1429.chunk.js",
     "static/css/main.9ea2f238.chunk.css",
-    "static/js/main.a61ba110.chunk.js"
+    "static/js/main.29c76609.chunk.js"
   ]
 }

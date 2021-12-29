@@ -15,6 +15,9 @@ import phpAvatar from './images/avatar/php.png'
 import pyAvatar from './images/avatar/py.png'
 import jupAvatar from './images/avatar/jup.png'
 import sqlAvatar from './images/avatar/sql.png'
+import sqlserverAvatar from './images/avatar/sqlserver.png'
+import netAvatar from './images/avatar/netcore.png'
+import azureAvatar from './images/avatar/azure.png'
 import restAvatar from './images/avatar/rest.png'
 import jsonAvatar from './images/avatar/json.png'
 import xmlAvatar from './images/avatar/xml.png'
@@ -171,21 +174,21 @@ function About() {
     const [codingProgress, setCodingProgress] = useState(0);
     const [codingValue, setCodingValue] = useState(65);
     const [frontValue, setFrontValue] = useState(80);
-    const [backValue, setBackValue] = useState(70);
-    const [dataValue, setDataValue] = useState(55);
-    const [mobileValue, setMobileValue] = useState(30);
+    const [backValue, setBackValue] = useState(75);
+    const [dataValue, setDataValue] = useState(60);
+    const [mobileValue, setMobileValue] = useState(40);
 
     const [designProgress, setDesignProgress] = useState(0);
     const [designValue, setDesignValue] = useState(60);
-    const [uiValue, setUiValue] = useState(60);
+    const [uiValue, setUiValue] = useState(65);
     const [uxValue, setUxValue] = useState(55);
-    const [threeValue, setThreeValue] = useState(40);
-    const [gdValue, setGdValue] = useState(80);
+    const [threeValue, setThreeValue] = useState(35);
+    const [gdValue, setGdValue] = useState(70);
 
     const [businessProgress, setBusinessProgress] = useState(0);
     const [businessValue, setBusinessValue] = useState(90);
     const [thValue, setThValue] = useState(75);
-    const [adminValue, setAdminValue] = useState(90);
+    const [adminValue, setAdminValue] = useState(80);
     const [sdValue, setSdValue] = useState(55);
     const [dmValue, setDmValue] = useState(65);
 
@@ -263,8 +266,8 @@ function About() {
                 <Grid item xs={12} sm={12} md={4} lg={12} className={classes.itemGrid}>
                     <Typography variant="h6" id="tekofont">Part coder</Typography>
                     <ui className={classes.p}>
-                        <li>Opiskellut sekä tehnyt omia front ja back -puolen projekteja.</li>
-                        <li>Matemaattisesti lahjakas, hallitsen tietorakenteet ja osaan arvioida algoritmeja.</li>
+                        <li>Opiskellut sekä tehnyt omia sovellusprojekteja vaihtelevin tekniikoin.</li>
+                        <li>Matemaattisesti lahjakas ja taitava teoreettisessa tietojenkäsittelyssä.</li>
                         <li>Tietojenkäsittelyn opintojen painotus ohjelmistokehityksessä.</li>
                         <li>Tutuimmat tekniikat ja työvälineet; React, - Native, Node, Python, C#, Microsoft</li>
                     </ui>
@@ -327,14 +330,16 @@ function About() {
                                 <Chip avatar={<Avatar alt="Node" src={nodeAvatar} />}label="NodeJS" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="React Native" src={reactAvatar} />} label="React Native" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="C#" src={cAvatar} />} label="C#" className={classes.chip} />
+                                <Chip avatar={<Avatar alt=".NET" src={netAvatar} />} label=".NET" className={classes.chip}/>
                                 <Chip avatar={<Avatar alt="PHP" src={phpAvatar} />} label="PHP" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="Python" src={pyAvatar} />} label="Python" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="Jupyter" src={jupAvatar} />} label="Jupyter" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="SQL/NoSQL" src={sqlAvatar} />} label="SQL/NoSQL" className={classes.chip} />
+                                <Chip avatar={<Avatar alt="SSMS" src={sqlserverAvatar} />} label="SSMS" className={classes.chip}/>
                                 <Chip avatar={<Avatar alt="REST" src={restAvatar} />} label="REST" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="JSON" src={jsonAvatar} />} label="JSON" className={classes.chip} />
                                 <Chip avatar={<Avatar alt="XML" src={xmlAvatar} />} label="XML" className={classes.chip} />
-                                <Chip avatar={<Avatar alt="SSMS" src={sqlAvatar} />} label="SSMS" className={classes.chip}/>
+                                <Chip avatar={<Avatar alt="Azure fundamentals" src={azureAvatar} />} label="Azure fundamentals" className={classes.chip}/>
                         </Box>
                     </Collapse>
                 </List>
@@ -348,14 +353,16 @@ function About() {
                     <Chip avatar={<Avatar alt="React Native" src={reactAvatar} />} label="React Native" className={classes.chip} />
                     <Chip avatar={<Avatar alt="Node" src={nodeAvatar} />}label="NodeJS" className={classes.chip} />
                     <Chip avatar={<Avatar alt="C#" src={cAvatar} />} label="C#" className={classes.chip} />
+                    <Chip avatar={<Avatar alt=".NET" src={netAvatar} />} label=".NET" className={classes.chip}/>
                     <Chip avatar={<Avatar alt="PHP" src={phpAvatar} />} label="PHP" className={classes.chip} />
                     <Chip avatar={<Avatar alt="Python" src={pyAvatar} />} label="Python" className={classes.chip} />
                     <Chip avatar={<Avatar alt="Jupyter" src={jupAvatar} />} label="Jupyter" className={classes.chip} />
                     <Chip avatar={<Avatar alt="SQL/NoSQL" src={sqlAvatar} />} label="SQL/NoSQL" className={classes.chip} />
+                    <Chip avatar={<Avatar alt="SSMS" src={sqlserverAvatar} />} label="SSMS" className={classes.chip}/>
                     <Chip avatar={<Avatar alt="REST" src={restAvatar} />} label="REST" className={classes.chip} />
                     <Chip avatar={<Avatar alt="JSON" src={jsonAvatar} />} label="JSON" className={classes.chip} />
                     <Chip avatar={<Avatar alt="XML" src={xmlAvatar} />} label="XML" className={classes.chip} />
-                    <Chip avatar={<Avatar alt="SSMS" src={sqlAvatar} />} label="SSMS" className={classes.chip}/>
+                    <Chip avatar={<Avatar alt="Azure fundamentals" src={azureAvatar} />} label="Azure fundamentals" className={classes.chip}/>
                 </Box>
             </Grid>
             

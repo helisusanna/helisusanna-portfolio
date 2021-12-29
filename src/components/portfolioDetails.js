@@ -410,7 +410,7 @@ export const portfolioDetails = [
       height: 1,
       title: "Offline Valuuttamuunnin",
       description1: `Euromäärän muuttaminen muuksi valuutaksi PWA-sovelluksella`,
-      description2: `PWA-sovellus Reactilla. Valuutat ja kurssit haetaan Web API rajapinnasta exchangeratesapi.io. Service Worker tallentaa tiedot kerran päivässä välimuistiin.`,
+      description2: `PWA-sovellus Reactilla. Valuutat ja kurssit haetaan Web API rajapinnasta exchangeratesapi.io. Service Worker tallentaa tiedot kerran päivässä välimuistiin. Voidaan tallentaan laitteeseen kuten natiivisovellus.`,
       link1: "https://github.com/helisusanna/currency-conventer",
       alt: "react api javascript pwa",
       className : "img",
